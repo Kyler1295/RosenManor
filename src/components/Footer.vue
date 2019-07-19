@@ -11,7 +11,7 @@ export default {};
 <style lang="scss" scoped>
 footer {
   height: 15vh;
-  background-color: #eeeeee;
+  background-color: #000000;
 }
 </style>
 

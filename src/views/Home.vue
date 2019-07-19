@@ -1,20 +1,37 @@
 <template>
   <section class="home">
+    <!-- Hero Image -->
     <div class="hero-image">
       <h1>Rosen Manor</h1>
       <p class="callout">Where your dreams come true, and our goal is to help.</p>
       <div class="image-overlay"></div>
+      <font-awesome-icon :icon="Arrow" class="scroll-arrow" />
     </div>
+    <!-- First Main Callout Section -->
     <div class="content-section">
       <h2>Your Perfect Day.</h2>
       <p>tempora sapiente repellat. Nam qui similique, perferendis neque illum vitae provident quam corrupti cum.</p>
       <Button :btnText="'Call Out Text'" :btnLink="'/about'" :btnWidth="'50%'" />
     </div>
+    <!-- Section For Icon Callouts -->
     <div class="icon-section">
       <section class="icon-segment">
         <font-awesome-icon :icon="CameraIcon" />
-        <h3>Make Memories.</h3>
+        <h3>See Our Grounds.</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, sint.</p>
+        <Button :btnText="'See Our Gallery'" :btnLink="'/gallery'" :btnWidth="'70%'" />
+      </section>
+      <section class="icon-segment">
+        <font-awesome-icon :icon="RingIcon" />
+        <h3>Learn How We Help You Plan.</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, sint.</p>
+        <Button :btnText="'Learn About Our Weddings'" :btnLink="'/wedding'" :btnWidth="'70%'" />
+      </section>
+      <section class="icon-segment">
+        <font-awesome-icon :icon="DrinkIcon" />
+        <h3>Find The Right Plan For You.</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, sint.</p>
+        <Button :btnText="'Find The Plan For You'" :btnLink="'/plans'" :btnWidth="'70%'" />
       </section>
     </div>
   </section>
@@ -22,13 +39,20 @@
 
 <script>
 import Button from "../components/Button";
-import { faCameraRetro, faRing } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCameraRetro,
+  faRing,
+  faGlassCheers,
+  faAngleDoubleDown
+} from "@fortawesome/free-solid-svg-icons";
 
 export default {
   data() {
     return {
       CameraIcon: faCameraRetro,
-      RingIcon: faRing
+      RingIcon: faRing,
+      DrinkIcon: faGlassCheers,
+      Arrow: faAngleDoubleDown
     };
   },
   name: "home",
@@ -76,6 +100,13 @@ export default {
       height: 100%;
       background-color: #33333375;
     }
+    .scroll-arrow {
+      position: absolute;
+      bottom: 3%;
+      left: 50%;
+      color: white;
+      animation: 1.5s ArrowAnimate infinite alternate;
+    }
   }
   // Content Section
   .content-section {
@@ -94,6 +125,30 @@ export default {
     p {
       margin: 0.4rem 0;
     }
+  }
+  // Icon Section
+  .icon-section {
+    height: 80vh;
+    background-color: #eeeeee;
+    padding: 1rem 0;
+    .icon-segment {
+      height: 33%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
+
+@keyframes ArrowAnimate {
+  from {
+    bottom: 6%;
+  }
+  to {
+    bottom: 3%;
   }
 }
 </style>
