@@ -13,6 +13,9 @@
       <p>tempora sapiente repellat. Nam qui similique, perferendis neque illum vitae provident quam corrupti cum.</p>
       <Button :btnText="'Call Out Text'" :btnLink="'/about'" :btnWidth="'50%'" />
     </div>
+    <div class="photo-section">
+
+    </div>
     <!-- Section For Icon Callouts -->
     <div class="icon-section">
       <section class="icon-segment">
@@ -125,6 +128,14 @@ export default {
     p {
       margin: 0.4rem 0;
     }
+  }
+  // Photo Section
+  .photo-section {
+    height: 40vh;
+    width: 100%;
+    background-image: url('../assets/Heart.jpg');
+    background-position: center;
+    background-size: cover;
   }
   // Icon Section
   .icon-section {
