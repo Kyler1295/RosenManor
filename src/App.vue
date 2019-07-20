@@ -1,7 +1,9 @@
 <template>
   <div class="wrapper">
+    <!-- Header Section -->
     <AppHeader />
     <main>
+      <!-- Main Router Section -->
       <router-view></router-view>
     </main>
     <AppFooter />

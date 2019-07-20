@@ -1,5 +1,7 @@
 <template>
+<!-- Dynamicly opens the nav on mobile -->
   <header :class="{ 'navShow': navOpen }">
+    <!-- Router Navigation -->
     <nav class="navigation">
       <ul>
         <router-link tag="li" to="/">
@@ -25,6 +27,7 @@
         </router-link>
       </ul>
     </nav>
+    <!-- Mobile Navigation -->
     <aside class="nav-holder" @click="navOpen = !navOpen">
       <font-awesome-icon :icon="navIcon" class="font-awesome-icon" />
     </aside>
@@ -37,10 +40,12 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 export default {
   data() {
     return {
+      // Controls the navigation. False = closed. True = open.
       navOpen: false
     };
   },
   computed: {
+    // Handles the navigation button switch
     navIcon() {
       return this.navOpen ? faTimes : faBars;
     }

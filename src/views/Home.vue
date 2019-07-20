@@ -1,5 +1,7 @@
+// This is the main home landing page for the website.
 <template>
   <section class="home">
+
     <!-- Hero Image -->
     <div class="hero-image">
       <h1>Rosen Manor</h1>
@@ -7,15 +9,17 @@
       <div class="image-overlay"></div>
       <font-awesome-icon :icon="Arrow" class="scroll-arrow" />
     </div>
+
     <!-- First Main Callout Section -->
     <div class="content-section">
       <h2>Your Perfect Day.</h2>
       <p>tempora sapiente repellat. Nam qui similique, perferendis neque illum vitae provident quam corrupti cum.</p>
       <Button :btnText="'Call Out Text'" :btnLink="'/about'" :btnWidth="'50%'" />
     </div>
-    <div class="photo-section">
 
-    </div>
+    <!-- Inbetween Photo Section -->
+    <div class="photo-section"></div>
+    
     <!-- Section For Icon Callouts -->
     <div class="icon-section">
       <section class="icon-segment">
@@ -41,6 +45,7 @@
 </template>
 
 <script>
+// imports
 import Button from "../components/Button";
 import {
   faCameraRetro,
