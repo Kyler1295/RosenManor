@@ -18,7 +18,7 @@
     </div>
 
     <!-- Inbetween Photo Section -->
-    <div class="photo-section"></div>
+    <PhotoSection :photoPath="Heart"/>
     
     <!-- Section For Icon Callouts -->
     <div class="icon-section">
@@ -41,12 +41,45 @@
         <Button :btnText="'Find The Plan For You'" :btnLink="'/plans'" :btnWidth="'70%'" />
       </section>
     </div>
+
+    <!-- Pricing Home Section -->
+    <div class="pricing-section">
+      <PricingCard :cardTitle="'Silver Plan'" :cardPrice="'$79'">
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+      </PricingCard>
+      <PricingCard :cardTitle="'Gold Plan'" :cardPrice="'$89'">
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+      </PricingCard>
+      <PricingCard :cardTitle="'Diamond Plan'" :cardPrice="'$99'">
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+      </PricingCard>
+    </div>
+    <PhotoSection :photoPath="CoupleSunset" />
+    <div class="calculator-section">
+      <h3>Worried About The Price?</h3>
+      <p>Use our custom price calculator to make sure you can plan for your wedding, and your goals.</p>
+      <Button :btnText="'Control  Your Wedding'" :btnLink="'/calculator'" :btnWidth="'60%'" />
+    </div>
   </section>
 </template>
 
 <script>
 // imports
 import Button from "../components/Button";
+import PricingCard from "../components/PricingCard";
+import PhotoSection from "../components/PhotoSection";
 import {
   faCameraRetro,
   faRing,
@@ -54,18 +87,26 @@ import {
   faAngleDoubleDown
 } from "@fortawesome/free-solid-svg-icons";
 
+// Image imports
+import Heart from "../assets/Heart.jpg";
+import CoupleSunset from "../assets/Couple-Sunset.jpg";
+
 export default {
   data() {
     return {
       CameraIcon: faCameraRetro,
       RingIcon: faRing,
       DrinkIcon: faGlassCheers,
-      Arrow: faAngleDoubleDown
+      Arrow: faAngleDoubleDown,
+      Heart,
+      CoupleSunset
     };
   },
   name: "home",
   components: {
-    Button
+    Button,
+    PricingCard,
+    PhotoSection
   }
 };
 </script>
@@ -134,14 +175,7 @@ export default {
       margin: 0.4rem 0;
     }
   }
-  // Photo Section
-  .photo-section {
-    height: 40vh;
-    width: 100%;
-    background-image: url('../assets/Heart.jpg');
-    background-position: center;
-    background-size: cover;
-  }
+  
   // Icon Section
   .icon-section {
     height: 80vh;
@@ -157,6 +191,27 @@ export default {
       padding: 1rem 0;
     }
   }
+  // Pricing Section
+  .pricing-section {
+    height: auto;
+    padding: 1rem 0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  // Calculator Section {
+    .calculator-section {
+      height: 60vh;
+      padding: 1rem 0;
+      background-color: #eee;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
 }
 
 @keyframes ArrowAnimate {

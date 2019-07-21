@@ -7,22 +7,22 @@
         <router-link tag="li" to="/">
           <span @click="navOpen = !navOpen">Home</span>
         </router-link>
-        <router-link tag="li" to="About">
+        <router-link tag="li" to="/about">
           <span @click="navOpen = !navOpen">About</span>
         </router-link>
-        <router-link tag="li" to="Wedding">
+        <router-link tag="li" to="/wedding">
           <span @click="navOpen = !navOpen">Wedding</span>
         </router-link>
-        <router-link tag="li" to="Gallery">
+        <router-link tag="li" to="/gallery">
           <span @click="navOpen = !navOpen">Gallery</span>
         </router-link>
-        <router-link tag="li" to="Plans">
+        <router-link tag="li" to="/plans">
           <span @click="navOpen = !navOpen">Plans</span>
         </router-link>
-        <router-link tag="li" to="Calculator">
+        <router-link tag="li" to="/calculator">
           <span @click="navOpen = !navOpen">Calculator</span>
         </router-link>
-        <router-link tag="li" to="Contact">
+        <router-link tag="li" to="/contact">
           <span @click="navOpen = !navOpen">Contact</span>
         </router-link>
       </ul>
@@ -59,7 +59,7 @@ header {
   height: 0;
   overflow: hidden;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   flex-direction: column;
   position: fixed;
@@ -67,6 +67,9 @@ header {
   left: 0;
   width: 100%;
   z-index: 1;
+  nav {
+    padding: 0 0 5rem 0;
+  }
   ul {
     list-style-type: none;
     li {
