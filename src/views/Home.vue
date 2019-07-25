@@ -190,7 +190,6 @@ export default {
       margin: 0 auto;
       text-align: center;
       h2 {
-        border-bottom: 2px solid black;
         width: 70%;
         padding: 0 0 0.25rem 0;
       }
@@ -285,15 +284,44 @@ export default {
     .hero-image {
       height: 95vh;
     }
+    .content-section {
+      .btn {
+        width: 10% !important;
+      }
+    }
+    .photo-section {
+      width: 80%;
+      margin: 0 auto 1rem;
+      height: 60vh;
+      background-position: top;
+    }
+    .icon-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+      height: 40vh;
+    }
     .pricing-section {
       flex-direction: row;
       width: 90vw;
-      margin: 0 auto;
+      margin: 1rem auto;
       justify-content: space-between;
       .pricing-card {
         width: 31.5%;
         padding: 2rem 0;
         margin: 0 0 0 0;
+      }
+    }
+    .calculator-section {
+      margin-bottom: 1rem;
+      .btn {
+        width: 10% !important;
+      }
+    }
+    .contact-callout {
+      .btn {
+        width: 10% !important;
       }
     }
   }
