@@ -1,7 +1,6 @@
 // This is the main home landing page for the website.
 <template>
   <section class="home">
-
     <!-- Hero Image -->
     <div class="hero-image">
       <h1>Rosen Manor</h1>
@@ -18,8 +17,8 @@
     </div>
 
     <!-- Inbetween Photo Section -->
-    <PhotoSection :photoPath="Heart"/>
-    
+    <PhotoSection :photoPath="Heart" />
+
     <!-- Section For Icon Callouts -->
     <div class="icon-section">
       <section class="icon-segment">
@@ -175,7 +174,7 @@ export default {
       margin: 0.4rem 0;
     }
   }
-  
+
   // Icon Section
   .icon-section {
     height: 80vh;
@@ -202,16 +201,16 @@ export default {
     flex-direction: column;
   }
   // Calculator Section {
-    .calculator-section {
-      height: 60vh;
-      padding: 1rem 0;
-      background-color: #eee;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
+  .calculator-section {
+    height: 60vh;
+    padding: 1rem 0;
+    background-color: #eee;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 @keyframes ArrowAnimate {
