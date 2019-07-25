@@ -1,6 +1,7 @@
 <template>
-<!-- Dynamicly opens the nav on mobile -->
+  <!-- Dynamicly opens the nav on mobile -->
   <header :class="{ 'navShow': navOpen }">
+    <h1>Rosen Manor</h1>
     <!-- Router Navigation -->
     <nav class="navigation">
       <ul>
@@ -49,60 +50,134 @@ export default {
     navIcon() {
       return this.navOpen ? faTimes : faBars;
     }
+  },
+  methods: {
+    checkScroll() {
+      if (window.matchMedia("only screen and (min-width: 1200px)").matches) {
+        if (window.pageYOffset > window.innerHeight) {
+          document.querySelector(".navShow").style.height = "5vh";
+          document.querySelector("h1").style.display = "none";
+          let li = document.querySelectorAll("li");
+          li.forEach(li => (li.style.color = "#000000"));
+        } else {
+          document.querySelector(".navShow").style.height = "15vh";
+          document.querySelector("h1").style.display = "block";
+          let li = document.querySelectorAll("li");
+          li.forEach(li => (li.style.color = "#ffffff"));
+        }
+      }
+    }
+  },
+  created() {
+    if (window.matchMedia("only screen and (min-width: 1200px)").matches) {
+      this.navOpen = true;
+    } else {
+      this.navOpen = false;
+    }
+    window.addEventListener("scroll", this.checkScroll);
   }
 };
 </script>
 
 <style lang="scss" scoped>
-header {
-  transition: 0.5s all ease-in;
-  height: 0;
-  overflow: hidden;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1;
-  nav {
-    padding: 0 0 5rem 0;
-  }
-  ul {
-    list-style-type: none;
-    li {
-      text-decoration: none;
-      padding: 0.25rem 0;
-    }
-  }
-  .nav-holder {
-    position: fixed;
-    bottom: 3%;
-    right: 10%;
+@media only screen and (min-width: 320px) {
+  header {
+    transition: 0.5s all ease-in;
+    height: 0;
+    overflow: hidden;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    background-color: darkslategray;
-    border-radius: 100%;
-    width: 5vh;
-    height: 5vh;
-    cursor: pointer;
-    z-index: 10;
-    .font-awesome-icon {
-      font-size: 1rem;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    h1 {
+      display: none;
     }
+    nav {
+      padding: 0 0 5rem 0;
+    }
+    ul {
+      list-style-type: none;
+      li {
+        text-decoration: none;
+        padding: 0.25rem 0;
+        color: #000000;
+      }
+    }
+    .nav-holder {
+      position: fixed;
+      bottom: 3%;
+      right: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: darkslategray;
+      border-radius: 100%;
+      width: 5vh;
+      height: 5vh;
+      cursor: pointer;
+      z-index: 10;
+      .font-awesome-icon {
+        font-size: 1rem;
+      }
+    }
+  }
+  .navShow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: #eeeeee;
+    height: 100vh;
   }
 }
-.navShow {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  background-color: #eeeeee;
-  height: 100vh;
+
+// Switching to set Header
+@media only screen and (min-width: 1200px) {
+  header {
+    overflow: inherit;
+    justify-content: center;
+    h1 {
+      text-align: center;
+      text-decoration: underline;
+      padding: 0 0 2rem 0;
+      color: #eee;
+      display: block;
+    }
+    .nav-holder {
+      display: none;
+    }
+    .navigation {
+      padding: 0 0 0 0;
+      width: 80%;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        li {
+          cursor: pointer;
+          text-decoration: none;
+          color: #eee;
+        }
+        li:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .navShow {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 15vh;
+  }
 }
 </style>
-
