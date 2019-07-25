@@ -1,6 +1,12 @@
+// Vue Imports
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+
+// Dependency Imports
+import 'aos/dist/aos.css'
+
+// Font Awesome Imports
 import {
   library
 } from '@fortawesome/fontawesome-svg-core'

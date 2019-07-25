@@ -13,11 +13,15 @@
 <script>
 import AppHeader from "./components/Header";
 import AppFooter from "./components/Footer";
+import AOS from "aos";
 
 export default {
   components: {
     AppHeader,
     AppFooter
+  },
+  created() {
+    AOS.init();
   }
 };
 </script>

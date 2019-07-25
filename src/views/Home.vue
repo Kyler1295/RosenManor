@@ -11,29 +11,60 @@
 
     <!-- First Main Callout Section -->
     <div class="content-section">
-      <h2>Your Perfect Day.</h2>
-      <p>tempora sapiente repellat. Nam qui similique, perferendis neque illum vitae provident quam corrupti cum.</p>
-      <Button :btnText="'Call Out Text'" :btnLink="'/about'" :btnWidth="'50%'" />
+      <h2 data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">Your Perfect Day.</h2>
+      <p
+        data-aos="fade-down"
+        data-aos-duration="1100"
+        data-aos-once="true"
+      >tempora sapiente repellat. Nam qui similique, perferendis neque illum vitae provident quam corrupti cum.</p>
+      <Button
+        data-aos="fade-down"
+        data-aos-duration="1200"
+        data-aos-once="true"
+        :btnText="'Call Out Text'"
+        :btnLink="'/about'"
+        :btnWidth="'50%'"
+      />
     </div>
 
     <!-- Inbetween Photo Section -->
-    <PhotoSection :photoPath="Heart" />
+    <PhotoSection
+      :photoPath="Heart"
+      data-aos="fade-down"
+      data-aos-duration="1500"
+      data-aos-once="true"
+    />
 
     <!-- Section For Icon Callouts -->
     <div class="icon-section">
-      <section class="icon-segment">
+      <section
+        class="icon-segment"
+        data-aos="fade-left"
+        data-aos-duration="1300"
+        data-aos-once="true"
+      >
         <font-awesome-icon :icon="CameraIcon" />
         <h3>See Our Grounds.</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, sint.</p>
         <Button :btnText="'See Our Gallery'" :btnLink="'/gallery'" :btnWidth="'50%'" />
       </section>
-      <section class="icon-segment">
+      <section
+        class="icon-segment"
+        data-aos="fade-left"
+        data-aos-duration="1300"
+        data-aos-once="true"
+      >
         <font-awesome-icon :icon="RingIcon" />
         <h3>Learn How We Help You Plan.</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, sint.</p>
         <Button :btnText="'Find Out More'" :btnLink="'/wedding'" :btnWidth="'50%'" />
       </section>
-      <section class="icon-segment">
+      <section
+        class="icon-segment"
+        data-aos="fade-left"
+        data-aos-duration="1300"
+        data-aos-once="true"
+      >
         <font-awesome-icon :icon="DrinkIcon" />
         <h3>Find The Right Plan For You.</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, sint.</p>
@@ -42,25 +73,48 @@
     </div>
 
     <!-- Photo Section 2 -->
-    <PhotoSection :photoPath="WeddingStairs" />
+    <PhotoSection
+      :photoPath="WeddingStairs"
+      data-aos="fade-down"
+      data-aos-duration="1500"
+      data-aos-once="true"
+    />
 
     <!-- Pricing Home Section -->
     <div class="pricing-section">
-      <PricingCard :cardTitle="'Silver Plan'" :cardPrice="'$79'">
+      <PricingCard
+        :cardTitle="'Silver Plan'"
+        :cardPrice="'$79'"
+        data-aos="fade-right"
+        data-aos-duration="1500"
+        data-aos-once="true"
+      >
         <li>Lorem ipsum dolor sit amet.</li>
         <li>Lorem ipsum dolor sit amet.</li>
         <li>Lorem ipsum dolor sit amet.</li>
         <li>Lorem ipsum dolor sit amet.</li>
         <li>Lorem ipsum dolor sit amet.</li>
       </PricingCard>
-      <PricingCard :cardTitle="'Gold Plan'" :cardPrice="'$89'">
+      <PricingCard
+        :cardTitle="'Gold Plan'"
+        :cardPrice="'$89'"
+        data-aos="fade-right"
+        data-aos-duration="1500"
+        data-aos-once="true"
+      >
         <li>Lorem ipsum dolor sit amet.</li>
         <li>Lorem ipsum dolor sit amet.</li>
         <li>Lorem ipsum dolor sit amet.</li>
         <li>Lorem ipsum dolor sit amet.</li>
         <li>Lorem ipsum dolor sit amet.</li>
       </PricingCard>
-      <PricingCard :cardTitle="'Diamond Plan'" :cardPrice="'$99'">
+      <PricingCard
+        :cardTitle="'Diamond Plan'"
+        :cardPrice="'$99'"
+        data-aos="fade-right"
+        data-aos-duration="1500"
+        data-aos-once="true"
+      >
         <li>Lorem ipsum dolor sit amet.</li>
         <li>Lorem ipsum dolor sit amet.</li>
         <li>Lorem ipsum dolor sit amet.</li>
@@ -70,20 +124,35 @@
     </div>
 
     <!-- Inbetween Photo Section 3 -->
-    <PhotoSection :photoPath="CoupleSunset" />
+    <PhotoSection
+      :photoPath="CoupleSunset"
+      data-aos="fade-down"
+      data-aos-duration="1500"
+      data-aos-once="true"
+    />
 
     <!-- Calculator Section -->
-    <div class="calculator-section">
+    <div
+      class="calculator-section"
+      data-aos="fade-down"
+      data-aos-duration="1500"
+      data-aos-once="true"
+    >
       <h3>Worried About The Price?</h3>
       <p>Use our custom price calculator to make sure you can plan for your wedding, and your goals.</p>
       <Button :btnText="'Control  Your Wedding'" :btnLink="'/calculator'" :btnWidth="'60%'" />
     </div>
 
     <!-- Inbetween Photo Section 4 -->
-    <PhotoSection :photoPath="CoupleHands" />
+    <PhotoSection
+      :photoPath="CoupleHands"
+      data-aos="fade-down"
+      data-aos-duration="1500"
+      data-aos-once="true"
+    />
 
     <!-- Contact Section -->
-    <div class="contact-callout">
+    <div class="contact-callout" data-aos="fade-down" data-aos-duration="1500" data-aos-once="true">
       <h3>Want To Learn More?</h3>
       <Button :btnText="'Contact Us Now!'" :btnLink="'/contact'" :btnWidth="'70%'" />
       <h3>And Make Your Dream A Reality.</h3>
