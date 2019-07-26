@@ -12,13 +12,15 @@ import {
 } from '@fortawesome/fontawesome-svg-core'
 import {
   faBars,
-  faTimes
+  faTimes,
+  faArrowLeft,
+  faArrowRight
 } from '@fortawesome/free-solid-svg-icons'
 import {
   FontAwesomeIcon
 } from '@fortawesome/vue-fontawesome'
 
-library.add(faBars, faTimes)
+library.add(faBars, faTimes, faArrowLeft, faArrowRight)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

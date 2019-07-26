@@ -40,5 +40,11 @@ export default new Router({
       name: 'contact',
       component: () => import('./views/Contact.vue')
     }
-  ]
+  ],
+  scrollBehavior() {
+    return {
+      x: 0,
+      y: 0
+    }
+  }
 })

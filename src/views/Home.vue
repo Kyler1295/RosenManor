@@ -36,35 +36,20 @@
     />
 
     <!-- Section For Icon Callouts -->
-    <div class="icon-section">
-      <section
-        class="icon-segment"
-        data-aos="fade-left"
-        data-aos-duration="1300"
-        data-aos-once="true"
-      >
+    <div class="icon-section" data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">
+      <section class="icon-segment">
         <font-awesome-icon :icon="CameraIcon" />
         <h3>See Our Grounds.</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, sint.</p>
         <Button :btnText="'See Our Gallery'" :btnLink="'/gallery'" :btnWidth="'50%'" />
       </section>
-      <section
-        class="icon-segment"
-        data-aos="fade-left"
-        data-aos-duration="1300"
-        data-aos-once="true"
-      >
+      <section class="icon-segment">
         <font-awesome-icon :icon="RingIcon" />
         <h3>Learn How We Help You Plan.</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, sint.</p>
         <Button :btnText="'Find Out More'" :btnLink="'/wedding'" :btnWidth="'50%'" />
       </section>
-      <section
-        class="icon-segment"
-        data-aos="fade-left"
-        data-aos-duration="1300"
-        data-aos-once="true"
-      >
+      <section class="icon-segment">
         <font-awesome-icon :icon="DrinkIcon" />
         <h3>Find The Right Plan For You.</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, sint.</p>
