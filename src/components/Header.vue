@@ -56,12 +56,12 @@ export default {
       console.log('checking');
       if (window.matchMedia("only screen and (min-width: 1200px)").matches) {
         if (window.pageYOffset > window.innerHeight - 200) {
-          document.querySelector(".navShow").style.height = "5vh";
+          document.querySelector("header").style.height = "5vh";
           document.querySelector("h1").style.display = "none";
           let li = document.querySelectorAll("li");
           li.forEach(li => (li.style.color = "#000000"));
         } else {
-          document.querySelector(".navShow").style.height = "15vh";
+          document.querySelector("header").style.height = "15vh";
           document.querySelector("h1").style.display = "block";
           let li = document.querySelectorAll("li");
           li.forEach(li => (li.style.color = "#ffffff"));
