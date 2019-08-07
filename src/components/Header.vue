@@ -53,6 +53,7 @@ export default {
   },
   methods: {
     checkScroll() {
+      console.log('checking');
       if (window.matchMedia("only screen and (min-width: 1200px)").matches) {
         if (window.pageYOffset > window.innerHeight - 200) {
           document.querySelector(".navShow").style.height = "5vh";
